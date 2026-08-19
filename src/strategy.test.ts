@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { chooseMoves } from './strategy.ts';
-import * as engine from '@rabestro/dicechess-engine';
+import { DiceChess } from '@fortemate/dicechess-engine';
 
 const UCI = /^[a-h][1-8][a-h][1-8][qrbn]?$/;
 
@@ -13,7 +13,7 @@ test('aggressive-book returns a well-formed, engine-legal turn from a bare DFEN'
   for (const m of moves) assert.match(m, UCI, `"${m}" must be a UCI micro-move`);
 
   // Cross-check against the engine's own legal-move enumeration for this roll.
-  const legal = new Set(engine.getLegalUciMoves(dfen));
+  const legal = new Set(DiceChess.getLegalUciMoves(dfen));
   for (const m of moves) assert.ok(legal.has(m), `"${m}" must be one of the engine's legal micro-moves`);
 });
 
