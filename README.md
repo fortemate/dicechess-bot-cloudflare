@@ -9,7 +9,10 @@
 
 Serverless webhook bot for the [Dice Chess](https://play.jc.id.lv/) platform running on **Cloudflare Workers**.
 
-The bot executes the official rules and search engine ([`@rabestro/dicechess-engine`](https://github.com/fortemate/dicechess-engine)) compiled to **Scala.js**. It plays using the engine's **aggressive** king-hunt search algorithm combined with the curated **opening book** (`aggressive-book`).
+The bot executes the official rules and search engine
+([`@fortemate/dicechess-engine`](https://www.npmjs.com/package/@fortemate/dicechess-engine)) compiled to
+**Scala.js**. It plays using the engine's **aggressive** king-hunt search algorithm combined with the curated
+**opening book** (`aggressive-book`).
 
 ### Key Highlights
 
@@ -43,8 +46,7 @@ The median request consumes well under 1 ms of CPU time, operating comfortably w
 │   ├── strategy.ts           # Move selection strategy using Scala.js engine
 │   ├── strategy.test.ts      # Unit tests for legal move generation
 │   ├── webhook.ts            # Webhook HMAC-SHA256 signature verification & dispatch
-│   ├── webhook.test.ts       # Webhook & signature vector test suite
-│   └── engine.d.ts           # TypeScript type definitions for @rabestro/dicechess-engine
+│   └── webhook.test.ts       # Webhook & signature vector test suite
 ├── tsconfig.json             # TypeScript configuration
 ├── wrangler.toml             # Cloudflare Workers deployment configuration
 └── package.json
@@ -57,11 +59,8 @@ The median request consumes well under 1 ms of CPU time, operating comfortably w
 ### Prerequisites
 
 - **Node.js**: v24+ (Node 26 recommended)
-- **GitHub Packages Auth**: `@rabestro/dicechess-engine` is hosted on GitHub Packages. Set `NODE_AUTH_TOKEN` before installing:
 
-```bash
-export NODE_AUTH_TOKEN=$(gh auth token)
-```
+All dependencies, including the engine, are public on npmjs.org and require no registry credentials.
 
 ### Setup & Commands
 
@@ -131,4 +130,5 @@ Once registered, your bot will automatically receive match challenges and compet
 
 ## License
 
-Distributed under the **GNU Affero General Public License v3.0** ([AGPL-3.0](./LICENSE)) due to linking with the AGPL-3.0 `@rabestro/dicechess-engine`.
+Distributed under the **GNU Affero General Public License v3.0** ([AGPL-3.0](./LICENSE)) due to linking with the
+AGPL-3.0 `@fortemate/dicechess-engine`.

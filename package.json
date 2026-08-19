@@ -4,6 +4,37 @@
   "private": true,
   "type": "module",
   "description": "Dice Chess webhook bot on Cloudflare Workers — the real engine (aggressive + book) via its Scala.js build.",
+  "author": {
+    "name": "Fortemate",
+    "url": "https://fortemate.com"
+  },
+  "contributors": [
+    {
+      "name": "Jegors Čemisovs",
+      "email": "jegors.cemisovs@gmail.com",
+      "url": "https://github.com/rabestro"
+    }
+  ],
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortemate/dicechess-bot-cloudflare.git"
+  },
+  "homepage": "https://github.com/fortemate/dicechess-bot-cloudflare#readme",
+  "bugs": {
+    "url": "https://github.com/fortemate/dicechess-bot-cloudflare/issues"
+  },
+  "keywords": [
+    "chess",
+    "dice-chess",
+    "bot",
+    "cloudflare-workers",
+    "webhook",
+    "scala-js"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
@@ -11,7 +42,7 @@
     "test": "node --test src/webhook.test.ts src/strategy.test.ts"
   },
   "dependencies": {
-    "@rabestro/dicechess-engine": "1.14.0"
+    "@fortemate/dicechess-engine": "0.4.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260816.1",
