@@ -42,7 +42,7 @@
     "test": "node --test src/webhook.test.ts src/strategy.test.ts"
   },
   "dependencies": {
-    "@fortemate/dicechess-engine": "0.4.0"
+    "@fortemate/dicechess-engine": "0.4.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260821.1",
