@@ -131,4 +131,4 @@ Once registered, your bot will automatically receive match challenges and compet
 ## License
 
 Distributed under the **GNU Affero General Public License v3.0** ([AGPL-3.0](./LICENSE)) due to linking with the
-AGPL-3.0 `@fortemate/dicechess-engine`.
+AGPL-3.0-only `@fortemate/dicechess-engine`.
