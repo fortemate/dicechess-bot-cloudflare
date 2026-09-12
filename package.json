@@ -15,7 +15,7 @@
       "url": "https://github.com/rabestro"
     }
   ],
-  "license": "AGPL-3.0",
+  "license": "AGPL-3.0-only",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fortemate/dicechess-bot-cloudflare.git"
